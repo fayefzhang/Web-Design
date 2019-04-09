@@ -1,57 +1,46 @@
-@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@font-face {
+    font-family: qtpi;
+    src: url("https://zephyo.github.io/5fonts10hours/qtpi/qtpi.otf");
+}
 
-.body-container {
-    font-family: 'Slabo 27px', serif;
-    font-size: 1.5em;
-    margin: auto;
+html,
+body {
+    background: linear-gradient(270deg, #f9d5d3, #d7dbd1, #f5c1c3);
+  background-size: 300% 300%;
+  animation: sky 37s ease infinite;
+}
+
+.container {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    position: absolute;
+    size: 100%;
+    background-color: white;
+    font-family: qtpi;
+    font-size: 3em;
+}
+
+a {
+    color: F5C1DD;
+}
+
+.text {
+    margin: 1em;
+}
+
+h1 {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+    font-size: 0.5em;
+}
+
+img {
     width: 50%;
-    padding: 10px;
-}
-
-.body-container .h1 {
-    color: #4B384C;
-}
-
-.box {
-    background-color: #E2A9E5;
-    width: 200px;
-    height: 200px;
-    margin: 200px auto 0;
-}
-
-.box:hover {
-    animation-name: box-to-circle;
-    animation-duration: 2s;
-    animation-delay: 0.5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: normal;
-}
-
-@keyframes box-to-circle {
-    0% {
-        border-radius: 0 0 0 0;
-        background: #E2A9E5;
-        transform: rotate(0deg);
-    }
-    25% {
-        border-radius: 25%;
-        background: #632C65;
-        transform: rotate(45deg);
-    }
-    50% {
-        border-radius: 50%;
-        background: #4B384C;
-        transform: rotate(90deg);
-    }
-    75% {
-        border-radius: 25%;
-        background: #632c65;
-        transform: rotate(135deg);
-    }
-    100% {
-        border-radius: 0;
-        background: #e2a9e5;
-        transform: rotate(180deg);
-    }
+    margin-left: 25%;
+    margin-right: 25%;
 }
