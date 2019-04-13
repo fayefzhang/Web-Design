@@ -1,7 +1,4 @@
-@font-face {
-    font-family: qtpi;
-    src: url("https://zephyo.github.io/5fonts10hours/qtpi/qtpi.otf");
-}
+@import url('https://fonts.googleapis.com/css?family=Caveat');
 
 html,
 body {
@@ -18,8 +15,8 @@ body {
     position: absolute;
     size: 100%;
     background-color: white;
-    font-family: qtpi;
-    font-size: 3em;
+    font-family: 'Caveat', cursive;
+    font-size: 2.5em;
 }
 
 a {
@@ -34,6 +31,10 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    margin-top: 2em;
+}
+
 .center {
     text-align: center;
     font-size: 0.5em;
@@ -43,4 +44,18 @@ img {
     width: 50%;
     margin-left: 25%;
     margin-right: 25%;
+}
+
+table {
+    width: 100%;
+}
+
+table, td {
+    border: 1px solid #f5c1c3;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+  padding: 15px;
 }
