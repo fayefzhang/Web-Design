@@ -29,7 +29,7 @@ body {
     position: absolute;
     z-index: 1;
     
-    margin: 2em 5em 2em 24em;
+    margin: 2em 5em 0em 24em;
     animation: enter 1.5s ease-out forwards;
     
     font-size: 3em;

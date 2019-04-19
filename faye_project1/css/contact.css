@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+html,
+body {
+    height: 100%;
+    overflow-y: hidden;
+    font-family: 'Amatic SC', cursive;
+}
+
+.container {
+    position: absolute;
+    border-radius: 3em 0em 0em 3em;
+    
+    margin: 3em 3em 0em 3em;
+    padding: 3em;
+    
+    width: 50vw;
+    height: 40vw;
+    animation: fadeIn 0.5s ease-out forwards;
+
+    
+    background-size: 200%;
+    background-image: url('../images/bg.jpg');
+    animation: bgA 120s ease infinite, fadeIn 1.5s ease-in forwards;
+}
+
+.intro {
+    position: absolute;
+    z-index: 1;
+    
+    margin: 2em 5em 0em 24em;
+    animation: enter 1.5s ease-out forwards;
+    
+    font-size: 3em;
+}
+
+.contact {
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.resources {
+    font-size: 0.5em;
+}
+
+@keyframes bgA { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@keyframes enter {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; 
+        transform: translateX(-10%);
+    }
+    100% {
+        opacity: 1;
+    }
+}
