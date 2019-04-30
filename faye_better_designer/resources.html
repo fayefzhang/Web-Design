@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bdesign | faye</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".logo").hide();
+            $("#hide").click(function () {
+                $(".logo").toggle();
+                console.log("hide");
+            });
+
+            //sample code from: https://tobiasahlin.com/moving-letters/#2
+            $('.heading').each(function () {
+                $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+            });
+
+            anime.timeline({ loop: false })
+                .add({
+                    targets: '.heading .letter',
+                    scale: [4, 1],
+                    opacity: [0, 1],
+                    translateZ: 0,
+                    easing: "easeOutExpo",
+                    duration: 950,
+                    delay: function (el, i) {
+                        return 70 * i;
+                    }
+                });
+        });
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="heading">resources</h1>
+        <p>these will be the things i use <br>
+            click button below to show/hide all logos :)</p>
+        <button class="button" style="vertical-align:middle" id="hide"><span><b>obligatory js button</b></span></button>
+        <ol>
+            <li><a href="https://stackoverflow.com/questions/8773921/how-to-automatically-scroll-down-a-html-page#8780717"
+                    target="_blank">stackoverflow</a></li>
+            <div class="logo">
+                <a href="https://stackoverflow.com/questions/8773921/how-to-automatically-scroll-down-a-html-page#8780717"
+                    target="_blank"><img src="images/stack.jpg"></a>
+            </div>
+            <ul>
+                <li>stackoverflow helps me with all my coding problems</li>
+                <li>it indeed is very helpful and i will use it when i find weird coding problems</li>
+            </ul>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">youtube</a></li>
+            <div class="logo">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="images/youtube.png"></a>
+            </div>
+            <ul>
+                <li>youtube has all your helpful guides yes</li>
+                <li>i will use it to procrastinate instead of actually coding (it's kinda counter-productive)</li>
+            </ul>
+            <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">css-tricks</a></li>
+            <div class="logo">
+                <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank"><img
+                        src="images/css-tricks.png"></a>
+            </div>
+            <ul>
+                <li>learn how to flexbox... it's better than html tables</li>
+                <li>honestly tho this site has helped me so much on making images align and I will continue to use it in
+                    the future</li>
+            </ul>
+            <li><a href="https://tobiasahlin.com/" target="_blank">tobiasahlin's blog</a></li>
+            <div class="logo">
+                <a href="https://tobiasahlin.com/" target="_blank"><img src="images/tobia.PNG"></a>
+            </div>
+            <ul>
+                <li>has really cool animations yep</li>
+                <li>the sample code seems really easy to learn from and then recreate in your own website</li>
+            </ul>
+            <li><a href="https://api.jquery.com/" target="_blank">jquery api</a></li>
+            <div class="logo">
+                <a href="https://api.jquery.com/" target="_blank"><img src="images/jquery.jpg"></a>
+            </div>
+            <ul>
+                <li>this website is basically how to jquery</li>
+                <li>for those of you who don't know what jquery, it's a cool thing that makes writing js a lot easier :)
+                </li>
+            </ul>
+        </ol>
+    </div>
+</body>
+
+</html>

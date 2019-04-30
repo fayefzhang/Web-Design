@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js deom | faye</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>hiiiiiiiii & welcome to my badly designed js page</h1>
+
+        <hr>
+
+        <h2>how do we do onclick events?</h2>
+        <a href="http://www.duckduckgo.com" target="_blank"
+            onclick="alert('do u think it\'s that easy to leave? C:<')">duckduckgo is the new google</a>
+        <p>clickk <a href="http://www.eastsideprep.org/" target="_blank"
+                onclick="alert('ur really leaving me?? :\'\)')">here</a> to visit my school ig</p>
+
+        <hr>
+
+        <h2>owo mathhhhh???? how to math yes</h2>
+        <p><b>what is </b><input style="width: 2em" id="a"> + <input style="width: 2em" id="b">?</p>
+        <button onclick="add()">askkkk the all-knowing faye</button>
+        <p style="font-size: 1.5em;">oh it's: <b><span id="result"></span></b></p>
+
+        <hr>
+
+        <p><b>What is 100 * 252?</b></p>
+        <button onclick="document.getElementById('multiply').innerHTML = 100 * 252">Click to find out</button>
+        <p id="multiply"></p>
+
+        <hr>
+
+        <h2>wowo functions who</h2>
+        <p>js changes ur css owow: </p>
+        <button onclick="big()">big boi</button>
+        <button onclick="smol()">smol bean</button>
+        <p id="change">big or smol i wonder?</p>
+
+        <hr>
+
+        <h2>sorry totally forgot to greet u</h2>
+        <p>name*: </p> <input id="name"><button onclick="greet()">enter!</button>
+        <p style="font-size: 4em;">hi <span id="output">customer</span>!</p>
+        <p>we'll take the best steps to support u ###</p>
+
+        <hr>
+
+        <h2>How do we change text?</h2>
+        <p><b>We can change <i>HTML</i> with <i>JS</i>!</b></p>
+        <button onclick="document.getElementById('change-text').innerHTML = 'You did it!'">Try it!</button>
+        <p id="change-text">This text will change.</p>
+        <p><b>We can also add the <u>Date</u> and <u>Time</u></b></p>
+        <button onclick="document.getElementById('date').innerHTML = Date()">What's the date?</button>
+        <!-- shortcut is p#elementname -->
+        <p id="date"></p>
+
+        <hr>
+
+        <h2>How do we make functions?</h2>
+        <button onclick="pFun()">Click Me!</button>
+        <p id="p-fun"></p>
+
+        <hr>
+
+        <h2>change cool pictures with JS</h2>
+        <p>picture version: </p>
+        <button onclick="document.getElementById('myImage').src='https://flufflaire.github.io/images/vex/2018/IMG_2316.jpg'">1.0</button>
+        <button onclick="document.getElementById('myImage').src='https://flufflaire.github.io/images/vex/2018/IMG_2317.jpg'">2.0</button>
+        <br><br>
+        <img id="myImage" src="https://flufflaire.github.io/images/vex/2018/IMG_2316.jpg" style="width:50%">
+    </div>
+</body>
+
+</html>

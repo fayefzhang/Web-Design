@@ -1,0 +1,86 @@
+@import 'https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Ranchers';
+
+body {
+	background-color: #07A0C3;
+}
+
+a {
+    font-size: 1.5em;
+    color: rgb(166, 204, 122);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    line-height: 0.9em;
+}
+
+.heading {
+    font-weight: 900;
+    font-size: 7em;
+}
+  
+.heading .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: rgb(52, 189, 219);
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    width: 260px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.container {
+	border-radius: 13px;
+	color: #1A1D24;	 
+	box-shadow: 0px 0px 15px #A7B696;
+	background-color: #F2F2F2;
+	font-size: 100%;
+	font-family: 'Patrick Hand SC';
+	padding: 2.5% 7%;
+    margin: 2em 7em;
+    line-height: 2em;
+}
+
+.logo img{
+    width: 100px;
+    height: auto;
+}

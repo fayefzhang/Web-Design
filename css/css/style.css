@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+
+html,
+body {
+    background: linear-gradient(270deg, #f9d5d3, #d7dbd1, #f5c1c3);
+    background-size: 300% 300%;
+}
+
+.container {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    position: absolute;
+    size: 100%;
+    background-color: white;
+    font-family: 'Caveat', cursive;
+    font-size: 2.5em;
+    animation:spin 4002s linear infinite;
+}
+
+.text {
+    margin: 1em;
+}
+
+
+
+.nav {
+    list-style: none;
+    text-align: center;
+}
+.nav li {
+    display: inline;
+    margin: 0 0.5em;
+}
+
+.copy {
+    font-size: 3em;
+    color: #C1F5F3;
+    margin-top: -1.5em;
+}
+
+.boi {
+    color: #f5c1c3;
+}
+
+.boios {
+    color: #f5c1c3;
+}
+
+.hahaha {
+    transform: translate(50%, -200%);
+    animation: load 10s linear infinite, owo 100s linear;
+}
+
+@keyframes spin {
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
+@keyframes owo {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes load { 
+    33% {
+        -webkit-transform: translateY(300%); 
+        transform: translateY(300%);
+    }
+    66% {
+        transform: translateX(83%);
+    } 
+
+    100% {
+        transform: translateX(-83%, -300%);
+    }
+}
