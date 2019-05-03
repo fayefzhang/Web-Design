@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Nanum+Gothic+Coding');
+
+/*
+font-family: 'Nanum Gothic Coding', monospace;
+font-family: 'Montserrat', sans-serif;
+*/
+
+
+html,
+body {
+    background-color: #29268E;
+    overflow-y: hidden;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 10em;
+}
+
+a {
+    color: white;
+}
+
+/*i love "position: absolute;" so much rn*/
+.nav {
+    position: absolute;
+    margin-top: 7.5%;
+    margin-left: 90%;
+    background-color: #3C85E8; 
+    padding: 4px 5px;
+}
+
+.menu {
+    background-color: #3C85E8;
+    border: none; 
+    color: white; 
+    font-size: 24px;
+    cursor: pointer; 
+}
+
+.links {
+    margin-left: 61%;
+    margin-top: 6.5%;
+    font-size: 1.2em;
+    opacity: 0;
+}
+
+.is-active {
+    animation: onActive 1s ease-out forwards;
+}
+
+.not-active {
+    animation: offActive 1s ease-out forwards;
+}
+
+.links-active {
+    animation: linkLoad 0.4s 0.8s ease-out forwards;
+}
+
+.links-inactive {
+    opacity: 0;
+}
+
+.all {
+    position: absolute;
+    margin-top: -4%;
+    margin-left: 5%;
+}
+
+.all u {
+    font-size: 2em;
+}
+
+.info {
+    margin-top: -5%;
+}
+
+.container {
+    background-color: white;
+    padding: 2em;
+    margin: 15% 5% 0 40%;
+    height: 500px;
+    border-radius: 3em 0em 0em 0em;
+}
+
+.face,
+.comp { 
+    position: absolute;
+}
+
+.face {
+    padding-left: 16%;
+}
+
+.code {
+    margin-top: 5%;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 2em;
+}
+
+.decoration {
+    position: absolute;
+    font-family: 'Nanum Gothic Coding', monospace;
+    font-size: 2.7em;
+    line-height: 1.5em;
+    color: #FE741C;
+    margin-left: 70%;
+    margin-top: 10.5%;
+    z-index: 2;
+}
+
+@keyframes onActive {
+    from {}
+    to {
+        margin-left: 60%;
+        margin-top: 6.5%;
+        padding-left: 30%;
+        padding-right: 1%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+}
+
+@keyframes offActive {
+    from {
+        margin-left: 60%;
+        margin-top: 6.5%;
+        padding-left: 30%;
+        padding-right: 1%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    to {
+        margin-top: 7.5%;
+        margin-left: 90%;
+        padding: 4px 5px;
+    }
+}
+
+@keyframes linkLoad {
+    from {
+        transform: translateX(5%);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
