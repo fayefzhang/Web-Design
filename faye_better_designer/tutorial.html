@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>web tutorial | faye</title>
+
+    <link rel="stylesheet" href="css/tutorial.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="nav is-active">
+        <button class="menu" style="position: aboslute;"><i class="fa fa-close"></i></button>
+    </div>
+    <div class="links links-active" style="position: absolute;">
+        <p><a class="ref" href="index.html">home</a> | website walkthrough | <a class="ref">tools</a> | <a class="ref"
+                href="resources.html">resources</a> | <a class="ref">surprise</a></p>
+    </div>
+    <div class="heading">
+        <h1 class="header">web tutorial</h1>
+    </div>
+    <div class="info">
+        <div class="s1">
+            <p><u>step 1: folders</u></p>
+            <p><i>create folders under your <b>root</b> folder:</i></p>
+            <ul>
+                <li>css</li>
+                <li>images</li>
+                <li>js</li>
+            </ul>
+            <div class="example" style="padding-bottom: 47%;">
+                <a href="images/fa.png"><img src="images/fa.png" alt="f1"></a>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;⬅ ️css folder (contains all your .css files)</span><br>
+                <a href="images/fb.png"><img src="images/fb.png" alt="f2"></a>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;⬅ images folder (contains all your images)</span><br>
+                <a href="images/fc.png"><img src="images/fc.png" alt="f3"></a>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;⬅ js folder (contains all your .js files)</span>
+            </div>
+        </div>
+        <div class="s2">
+            <p><u>step 2: html</u></p>
+            <p><i> create an <b>index.html</b> file:</i></p>
+            <ul>
+                <li>type "html:5" to set it up</li>
+                <li>create an <b>h1</b> tag in body</li>
+                <li>commence coding</li>
+            </ul>
+            <div class="example" style="padding-bottom: 37%;">
+                <a href="images/html.png"><img src="images/html.png" alt="html"></a>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;⬅ "index.html" file (loads first)</span> <br>
+                <p style="color: #FE741C;">link a page: <br><span
+                        style="font-family: 'Nanum Gothic Coding', monospace; color: #3C85E8;">
+                        &lta href="http://www.link-here.com"&gtclick hERE&lt/a&gt</span></p>
+                <p style="color: #FE741C;">link an image: <br><span
+                        style="font-family: 'Nanum Gothic Coding', monospace; color: #3C85E8;">
+                        &ltimg src="images/image.png alt="image"&gt</span></p>
+            </div>
+        </div>
+        <div class="s3">
+            <p><u>step 3: css</u></p>
+            <p><i>there are <b>3 ways</b> to do css: </i></p>
+            <ul>
+                <li>inline</li>
+                <li>internal</li>
+                <li>external stylesheet</li>
+            </ul>
+            <div class="example" style="padding-bottom: 1em; padding-top: 1em;">
+                <p style="color: #FE741C;">do inline style: <br><span
+                        style="font-family: 'Nanum Gothic Coding', monospace; color: #3C85E8;">
+                        &ltp style="color: red;"&gtred text&lt/p&gt</span></p>
+                <p style="color: #FE741C;">internal style in the &lthead&gt: <span
+                        style="font-family: 'Nanum Gothic Coding', monospace; color: #3C85E8; line-height: 0.2em;">
+                        <br>
+                        &ltstyle&gt <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;h1 { <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 900; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-size: 10em; <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;} <br>
+                        &lt/style&gt</span></p>
+                <p style="color: #FE741C;">do external style via stylesheet in &lthead&gt: <br><span
+                        style="font-family: 'Nanum Gothic Coding', monospace; color: #3C85E8;">
+                        &ltlink rel="styelsheet" href="css/style.css"&gt</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //nav stuff
+            var isActive = true;
+            $(".menu").click(function () {
+                if (isActive) { //is active
+                    $(".nav").addClass("not-active");
+                    $(".nav").removeClass("is-active");
+                    $(".fa").addClass("fa-bars");
+                    $(".fa").removeClass("fa-close");
+                    $(".links").addClass("links-inactive");
+                    $(".links").removeClass("links-active");
+                    isActive = false;
+                }
+                else { //not active
+                    $(".nav").removeClass("not-active");
+                    $(".nav").addClass("is-active");
+                    $(".fa").removeClass("fa-bars");
+                    $(".fa").addClass("fa-close");
+                    $(".links").removeClass("links-inactive");
+                    $(".links").addClass("links-active");
+                    isActive = true;
+                }
+            });
+
+            //just a fancy hover for when im too lazy to put in links
+            $(".ref").mouseenter(function () {
+                $(this).css("text-decoration", "underline");
+            });
+            $(".ref").mouseleave(function () {
+                $(this).css("text-decoration", "none");
+            });
+
+        });
+    </script>
+</body>
+
+</html>

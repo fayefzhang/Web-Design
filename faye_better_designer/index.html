@@ -41,61 +41,69 @@
 </head>
 
 <body onmousemove="mouseXFollow(event)">
-    <div class="nav">
-        <button class="menu" style="position: aboslute;"><i class="fa fa-bars"></i></button>
+    <div class="disclaimer">
+        <p>Sorry this webpage is only made for viewing by devices with windows width of 1920px. <br>
+            Since Faye is to lazy to make this website compatible with all widths of windows, <br>
+            Please resize your screen to that size to view this webpage or ask to view it from Faye's computer if she's
+            near.</p>
     </div>
-    <div class="links" style="position: absolute;">
-        <p>home | <a class="ref">website walkthrough</a> | <a class="ref">tools</a> | <a class="ref" href="resources.html">resources</a> | <a
-                class="ref">surprise</a></p>
-    </div>
-    <div class="all">
-        <h1 class="header">
-            <span class="text-wrapper">
-                <span class="line line1"></span>
-                <span class="letters">how to web </span>
-            </span>
-        </h1>
-        <div class="info">
-            <p><u>hi welcome to how to web 101!</u></p>
-            <p><i>what u will learn here:</i></p>
-            <ul>
-                <li>how to make a boring website</li>
-                <li>tools in making a boring website</li>
-                <li>resources to use when making a boring website</li>
-                <li>what is considered a "surprise"</li>
-            </ul>
+    <div class="clear">
+        <div class="nav is-active">
+            <button class="menu" style="position: aboslute;"><i class="fa fa-close"></i></button>
         </div>
-        <div class="code">
-            <p>
-                //all hail js <br>
-                <br>
-                function hello() { <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;console.log("hello web"); <br>
-                } <br>
-                <br>
-                hello();
+        <div class="links links-active" style="position: absolute;">
+            <p>home | <a class="ref" href="tutorial.html">website walkthrough</a> | <a class="ref">tools</a> | <a
+                    class="ref" href="resources.html">resources</a> | <a class="ref">surprise</a></p>
+        </div>
+        <div class="all">
+            <h1 class="header">
+                <span class="text-wrapper">
+                    <span class="line line1"></span>
+                    <span class="letters">how to web</span>
+                </span>
+            </h1>
+            <div class="info">
+                <p><u>hi welcome to how to web 101!</u></p>
+                <p><i>what u will learn here:</i></p>
+                <ul>
+                    <li>how to make a boring website</li>
+                    <li>tools in making a boring website</li>
+                    <li>resources to use when making a boring website</li>
+                    <li>what is considered a "surprise"</li>
+                </ul>
+            </div>
+            <div class="code">
+                <p>
+                    //all hail js <br>
+                    <br>
+                    function hello() { <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log("hello web"); <br>
+                    } <br>
+                    <br>
+                    hello();
+                </p>
+            </div>
+            <p>honestly tho this website feels like im trying to sell you something</p>
+        </div>
+        <div class="decoration">
+            <p>code my thoughts away <br>
+                code my thoughts away <br>
+                code my thoughts away <br>
+                code my thoughts away <br>
+                code my thoughts away <br>
+                code my thoughts away <br>
+                code my thoughts away <br>
+                code my thoughts away <br>
+                code my thoughts away
             </p>
         </div>
-        <p>honestly tho this website feels like im trying to sell you something</p>
-    </div>
-    <div class="decoration">
-        <p>code my thoughts away <br>
-            code my thoughts away <br>
-            code my thoughts away <br>
-            code my thoughts away <br>
-            code my thoughts away <br>
-            code my thoughts away <br>
-            code my thoughts away <br>
-            code my thoughts away <br>
-            code my thoughts away
-        </p>
-    </div>
-    <div class="container">
-        <div class="comp">
-            <a href="images/comb.png"><img src="images/comb.png" alt="comp"></a>
-        </div>
-        <div class="face" id="face">
-            <a href="images/comf.png"><img src="images/comf.png" alt="face"></a>
+        <div class="container">
+            <div class="comp">
+                <a href="images/comb.png"><img src="images/comb.png" alt="comp"></a>
+            </div>
+            <div class="face" id="face">
+                <a href="images/comf.png"><img src="images/comf.png" alt="face"></a>
+            </div>
         </div>
     </div>
 
@@ -140,7 +148,7 @@
                     delay: 1000
                 });
 
-            var isActive = false;
+            var isActive = true;
             $(".menu").click(function () {
                 if (isActive) { //is active
                     $(".nav").addClass("not-active");
@@ -170,6 +178,15 @@
                 $(this).css("text-decoration", "none");
             });
 
+            //console.log($(window).width());
+            if ($(window).width() == 1920) {
+                $(".disclaimer").remove();
+            } else {
+                $(".clear").remove();
+            }
+            if ($(window).height() <= 950) {
+                $("body").css("overflow-y", "scroll");
+            }
         });
     </script>
 </body>

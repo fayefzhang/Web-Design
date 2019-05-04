@@ -9,8 +9,8 @@ font-family: 'Montserrat', sans-serif;
 html,
 body {
     background-color: #29268E;
-    font-family: 'Montserrat', sans-serif;
     overflow-y: hidden;
+    font-family: 'Montserrat', sans-serif;
     color: white;
 }
 
@@ -19,27 +19,12 @@ h1 {
     font-size: 10em;
 }
 
+/* nav stuff */
 a {
     color: white;
     text-decoration: none;
 }
 
-.disclaimer {
-    position: aboslute;
-    height: 100%;
-    padding-left: 5%;
-    padding-top: 20%;
-    padding-bottom: 100%;
-    font-family: 'Nanum Gothic Coding', monospace;
-    line-height: 3em;
-    font-size: 1.5em;
-}
-
-.clear {
-    position: aboslute;
-}
-
-/*i love "position: absolute;" so much rn*/
 .nav {
     position: absolute;
     margin-top: 7.5%;
@@ -79,54 +64,51 @@ a {
     opacity: 0;
 }
 
-.all {
+/* header stuff */
+.heading {
     position: absolute;
     margin-top: -4%;
     margin-left: 5%;
 }
 
-.all u {
+.info {
+    position: aboslute;
+    margin: 18% 5%;
+}
+
+.info u {
     font-size: 2em;
 }
 
-.info {
+.s1, .s2, .s3 {
+    position: absolute;
     margin-top: -5%;
 }
 
-.container {
-    position: absolute;
+.s1 {
+    margin-left: 0;
+}
+
+.example {
+    border-radius: 3em 0em;
+    padding: 3em;
+    width: 400px;
     background-color: white;
-    width: 50%;
-    padding: 2em;
-    margin: 15% 5% 0 40%;
-    height: 500px;
-    border-radius: 3em 0em 0em 0em;
-}
-
-.face,
-.comp { 
-    position: absolute;
-}
-
-.face {
-    padding-left: 30%;
-}
-
-.code {
     margin-top: 5%;
-    font-family: 'Nanum Gothic Coding', monospace;
-    font-size: 2em;
+    color: #3C85E8;
+    line-height: 2em;
 }
 
-.decoration {
-    position: absolute;
-    font-family: 'Nanum Gothic Coding', monospace;
-    font-size: 2.7em;
-    line-height: 1.5em;
-    color: #FE741C;
-    margin-left: 70%;
-    margin-top: 10.5%;
-    z-index: 2;
+.example img {
+    width: 10%;
+}
+
+.s2 {
+    margin-left: 30%;
+}
+
+.s3 {
+    margin-left: 60%;
 }
 
 @keyframes onActive {
