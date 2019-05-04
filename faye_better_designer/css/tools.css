@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Nanum+Gothic+Coding');
+
+/*
+font-family: 'Nanum Gothic Coding', monospace;
+font-family: 'Montserrat', sans-serif;
+*/
+
+
+html,
+body {
+    background-color: #29268E;
+    overflow-y: hidden;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 10em;
+}
+
+/* nav stuff */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav {
+    position: absolute;
+    margin-top: 7.5%;
+    margin-left: 90%;
+    background-color: #3C85E8; 
+    padding: 4px 5px;
+}
+
+.menu {
+    background-color: #3C85E8;
+    border: none; 
+    color: white; 
+    font-size: 24px;
+    cursor: pointer; 
+}
+
+.links {
+    margin-left: 61%;
+    margin-top: 6.5%;
+    font-size: 1.2em;
+    opacity: 0;
+}
+
+.is-active {
+    animation: onActive 1s ease-out forwards;
+}
+
+.not-active {
+    animation: offActive 1s ease-out forwards;
+}
+
+.links-active {
+    animation: linkLoad 0.4s 0.8s ease-out forwards;
+}
+
+.links-inactive {
+    opacity: 0;
+}
+
+/* header stuff */
+.heading {
+    position: absolute;
+    margin-top: -4%;
+    margin-left: 5%;
+}
+
+.decoration {
+    position: aboslute;
+    margin: 15% 5% 0;
+    padding: 2em;
+    background-color: white;
+    border-radius: 3em 0 0 0;
+}
+
+.info {
+    position: aboslute;
+    margin: 1.5% 5% 0;
+    padding: 2em;
+    background-color: white;
+    border-radius: 0 0 3em 0;
+    height: 400px;
+}
+
+.info img {
+    width: 10%;
+}
+
+@keyframes onActive {
+    from {}
+    to {
+        margin-left: 60%;
+        margin-top: 6.5%;
+        padding-left: 30%;
+        padding-right: 1%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+}
+
+@keyframes offActive {
+    from {
+        margin-left: 60%;
+        margin-top: 6.5%;
+        padding-left: 30%;
+        padding-right: 1%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    to {
+        margin-top: 7.5%;
+        margin-left: 90%;
+        padding: 4px 5px;
+    }
+}
+
+@keyframes linkLoad {
+    from {
+        transform: translateX(5%);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
