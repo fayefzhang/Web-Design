@@ -108,12 +108,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
-            var percent = ($(window).width()) / 1920 * 100;
-            if ($(window).width() != 1920) {
-                document.querySelector('style').textContent +=
-                "@media screen and (max-width:" + $(window).width() + "px) { html, body {width: " + percent + "%; font-size: " + percent + "%;} div {width: " + percent + "%;} img {width: " + percent + "%;} .face img {width: " + percent/2 + "%;}}";
-            }
-
             //nav stuff
             var isActive = true;
             $(".menu").click(function () {
