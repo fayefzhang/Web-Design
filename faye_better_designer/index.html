@@ -43,7 +43,7 @@
 <body onmousemove="mouseXFollow(event)">
     <div class="disclaimer">
         <p>Sorry this webpage is only made for viewing by devices with windows width of 1920px. <br>
-            Since Faye is to lazy to make this website compatible with all widths of windows, <br>
+            Since Faye is too lazy to make this website compatible with all widths of windows, <br>
             Please resize your screen to that size to view this webpage or ask to view it from Faye's computer if she's
             near.</p>
     </div>
@@ -52,8 +52,9 @@
             <button class="menu" style="position: aboslute;"><i class="fa fa-close"></i></button>
         </div>
         <div class="links links-active" style="position: absolute;">
-            <p>home | <a class="ref" href="tutorial.html">website walkthrough</a> | <a class="ref" href="tools.html">tools</a> | <a
-                    class="ref" href="resources.html">resources</a> | <a class="ref" href="surprise.html">surprise</a></p>
+            <p>home | <a class="ref" href="tutorial.html">website walkthrough</a> | <a class="ref"
+                    href="tools.html">tools</a> | <a class="ref" href="resources.html">resources</a> | <a class="ref"
+                    href="surprise.html">surprise</a></p>
         </div>
         <div class="all">
             <h1 class="header">
@@ -112,6 +113,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
+            var percent = ($(window).width()) / 1920 * 100;
+            if ($(window).width() != 1920) {
+                document.querySelector('style').textContent +=
+                "@media screen and (max-width:" + $(window).width() + "px) { html, body {width: " + percent + "%; font-size: " + percent + "%;} div {width: " + percent + "%;} img {width: " + percent + "%;} .face img {width: " + percent/2 + "%;}}";
+            }
+            
             //code for animated header from https://tobiasahlin.com/moving-letters/#11
             $('.header .letters').each(function () {
                 $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
@@ -179,11 +186,11 @@
             });
 
             //console.log($(window).width());
-            if ($(window).width() == 1920) {
-                $(".disclaimer").remove();
-            } else {
-                $(".clear").remove();
-            }
+            //if ($(window).width() == 1920) {
+            $(".disclaimer").remove();
+            //} else {
+            //   $(".clear").remove();
+            //}
             if ($(window).height() <= 950) {
                 $("body").css("overflow-y", "scroll");
             }

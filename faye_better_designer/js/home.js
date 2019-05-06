@@ -1,4 +1,4 @@
-//palette (cause im a pro web designer already)
+    //palette (cause im a pro web designer already) 
 //base "#3C85E8";
 //light "#59E1FF";
 //shadow "#29268E"

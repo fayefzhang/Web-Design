@@ -1,0 +1,70 @@
+
+
+tw-story {
+    position: absolute;
+  background-color: white;
+  color: #3C85E8;
+  font-family: 'Nanum Gothic Coding', monospace;
+  font-size: 100%;
+
+  border-radius: 3em 0;
+    width: 1500px;
+  padding: 2em;
+    margin: 10% 10% 0 10%;
+    min-height: 60%;
+}
+
+tw-passage img {
+    position: absolute;
+   display: block;
+  border-radius: 10px;
+  width: 500px;
+    height: auto;
+}
+
+tw-passage .det {
+  background-color: #E5FDFF;
+  color: #29268E;
+  font-size: 90%;
+  font-weight: normal;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-radius: 15px;
+  padding: 2% 5% 2% 5%;
+}
+
+
+tw-link .det{
+  color: #8A0917;
+}
+
+tw-passage p {
+  text-indent: 1.5em;
+}
+
+tw-passage b {
+  font-weight: 900;
+}
+
+tw-link {
+  font-family: 'Montserrat', sans-serif;
+   color: #59E1FF;
+}
+
+tw-link.visited {
+  font-family: 'Montserrat', sans-serif;
+   color: #59E1FF;
+}
+
+tw-link:hover, tw-link.visited:hover {
+   color: #FE741C;
+}
+
+tw-sidebar {
+  display: none;
+}
+
+del {
+  background-color: inherit;
+  text-decoration: line-through;
+}
