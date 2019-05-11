@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
+/* 
+font-family: 'Raleway', sans-serif;
+font-family: 'Playfair Display', serif;
+*/
+
+html,
+body {
+    background-color: #e3abca;
+    font-family: 'Raleway', sans-serif;
+    color: #f3ecf2;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 1000%;
+}
+
+h2 {
+    font-size: 800%;
+}
+
+a {
+    color: #f3ecf2;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1000px) {
+  html,
+  body {
+    font-size: 90%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  html,
+  body {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    font-size: 70%;
+  }
+}
+
+/* grid css */
+.grid-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #e3abca;
+    padding: 1em;
+    background-size: cover;
+    color: #007d92;
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+.item1, .item2, .item3, .item4, .item5,
+.item6, .item7, .item8, .item9 {
+    background-color: #f3ecf2;
+    grid-column: 1 / span 3;
+    padding: 2px;
+    height: 500px;
+    
+    border-radius: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.item1 {
+    background-image: url(../images/b1.jpg)
+}
+.item2 {
+    grid-column: 1;
+    background-image: url(../images/b2.jpg)
+}
+.item3 {
+    grid-column: 2;
+    background-image: url(../images/b3.jpg)
+}
+.item4 {
+    grid-column: 3;
+    background-image: url(../images/b4.jpg)
+}
+.item5 {
+    background-image: url(../images/b5.jpg)
+}
+.item6 {
+    grid-column: 1;
+    background-image: url(../images/b6.jpg)
+}
+.item7 {
+    grid-column: 2;
+    background-image: url(../images/b7.jpg)
+}
+.item8 {
+    grid-column: 3;
+    background-image: url(../images/b8.jpg)
+}
+.item9 {
+    background-image: url(../images/b9.jpg)
+}
+
+/* nav css */
+.nav {
+    position: absolute;
+    margin-top: 7.5%;
+    margin-left: 90%;
+    background-color: #ce5a6a; 
+    padding: 4px 5px;
+}
+
+.menu {
+    background-color: #ce5a6a;
+    border: none; 
+    color: #f3ecf2; 
+    font-size: 24px;
+    cursor: pointer; 
+}
+
+.links {
+    margin-left: 61%;
+    margin-top: 6.5%;
+    font-size: 1.2em;
+    opacity: 0;
+}
+
+.is-active {
+    animation: onActive 1s ease-out forwards;
+}
+
+.not-active {
+    animation: offActive 1s ease-out forwards;
+}
+
+.links-active {
+    animation: linkLoad 0.4s 0.8s ease-out forwards;
+}
+
+.links-inactive {
+    opacity: 0;
+}
+
+@keyframes onActive {
+    from {}
+    to {
+        margin-left: 60%;
+        margin-top: 6.5%;
+        padding-left: 30%;
+        padding-right: 1%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+}
+
+@keyframes offActive {
+    from {
+        margin-left: 60%;
+        margin-top: 6.5%;
+        padding-left: 30%;
+        padding-right: 1%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    to {
+        margin-top: 7.5%;
+        margin-left: 90%;
+        padding: 4px 5px;
+    }
+}
+
+@keyframes linkLoad {
+    from {
+        transform: translateX(5%);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
