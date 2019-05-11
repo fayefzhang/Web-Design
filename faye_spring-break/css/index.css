@@ -2,6 +2,7 @@
 /* 
 font-family: 'Raleway', sans-serif;
 font-family: 'Playfair Display', serif;
+color-palette: https://colorpalettes.net/color-palette-3995/
 */
 
 html,
@@ -44,6 +45,40 @@ a {
   body {
     font-size: 70%;
   }
+}
+
+.mandatory-image {
+    position: absolute;
+    margin-left: 40%;
+    margin-top: -5%;
+    background-image: url(../images/b1.jpg);
+    border-radius: 5%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    width: 50%;
+    height: 500px;
+}
+
+/* table stuff */
+.tab {
+    position: absolute;
+    margin-left: 50%;
+    margin-top: -40%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #600012;
+}
+  
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
 }
 
 /* grid css */
@@ -114,6 +149,7 @@ a {
     margin-left: 90%;
     background-color: #ce5a6a; 
     padding: 4px 5px;
+    z-index: 1;
 }
 
 .menu {
@@ -122,6 +158,7 @@ a {
     color: #f3ecf2; 
     font-size: 24px;
     cursor: pointer; 
+    z-index: 2;
 }
 
 .links {
@@ -129,6 +166,7 @@ a {
     margin-top: 6.5%;
     font-size: 1.2em;
     opacity: 0;
+    z-index: 2;
 }
 
 .is-active {
