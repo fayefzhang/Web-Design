@@ -12,49 +12,294 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+        @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+        html,
+        body {
+            height: 100vh;
+            overflow-x: hidden;
+            font-family: 'Amatic SC', cursive;
+        }
+
         ::-webkit-scrollbar {
             width: 0;
         }
 
-
-        .cover {
-            height: 100vh;
-            background-image: url("images/bg3.png");
-            background-repeat: no repeat;
+        h1 {
+            font-size: 8vw;
+            font-weight: 800;
         }
 
-        .info {
-            min-height: 100vh;
-            background-color: skyblue;
+        h2 {
+            font-size: 3.5vw;
+            padding-top: 2vh;
+        }
+
+        p {
+            font-size: 3vw;
+            font-family: 'Fredericka the Great', cursive;
+        }
+
+        a {
+            color: rgb(34, 34, 133);
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: line-through;
+        }
+
+        .sidenav {
+            height: 0;
+            width: 15vw;
+            position: fixed;
+            z-index: 1;
+
+            top: 0;
+            left: 85vw;
+            background-color: #111;
+            overflow-x: hidden;
+
+            padding-top: 15vh;
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        .sidenav a {
+            padding: 1.5vh 2vw 1vh 5vw;
+            text-decoration: none;
+            font-size: 2vw;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 2vw;
+            }
+        }
+
+        .main {
+            height: 100vh;
+            background-image: linear-gradient(to bottom, rgb(235, 248, 255) 0%, rgba(239, 253, 255, 0.721) 25%), url("images/bg3.png");
+            background-size: cover;
+            padding: 5vh 20vw 5vh 10vw;
+        }
+
+        .intro {
+            padding: 10vh 10vw;
+        }
+
+        .ml10 {
+            position: relative;
+        }
+
+        .ml10 .text-wrapper {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .ml10 .letter {
+            display: inline-block;
+            transform-origin: 0 0;
+        }
+
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* The actual popup */
+        .popup .popuptext {
+            visibility: hidden;
+            width: 50vw;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 1vw;
+            padding: 1vh 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125vh;
+            left: 50vw;
+            margin-left: -20vw;
+        }
+
+        .popup .show {
+            visibility: visible;
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        #mask {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 3;
+            background-color: rgb(12, 13, 19);
+            display: none;
+        }
+
+        #boxes .window {
+            position: absolute;
         }
     </style>
 </head>
 
 <body>
-
-    <div class="cover" style="padding: 5vh 20vw 5vh 10vw;">
-
-        <a href="#0"><button class="btn" style="position: absolute; margin-top: 0; margin-left: 80vw;"><i class="fa fa-bars"
-            style="font-size: 3vw;"></i></button></a>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Lorem ipsum dolor sit amet consectetur adipiscing elit ut. In fermentum et sollicitudin ac
-            orci. Et netus et malesuada fames ac. Imperdiet sed euismod nisi porta lorem mollis. Nec dui nunc mattis
-            enim ut tellus elementum sagittis vitae. Diam phasellus vestibulum lorem sed risus. Ac odio tempor orci
-            dapibus ultrices in iaculis nunc. Amet purus gravida quis blandit turpis. Non quam lacus suspendisse
-            faucibus interdum. Parturient montes nascetur ridiculus mus mauris vitae ultricies leo. Fermentum posuere
-            urna nec tincidunt praesent semper feugiat. Sed sed risus pretium quam vulputate. Tortor id aliquet lectus
-            proin nibh nisl condimentum. Dolor morbi non arcu risus quis varius quam. Vitae justo eget magna fermentum.
-            Id semper risus in hendrerit gravida rutrum quisque. Risus in hendrerit gravida rutrum. Purus faucibus
-            ornare suspendisse sed nisi. Mi sit amet mauris commodo.</p>
-    </div>
-    <div class="info">
-        dkajf;lksj
+    <div id="boxes">
+        <div id="dialog" class="window" style="background-color: white; padding: 1vw; text-align: center; height: 30vh; width: 30vw; border-radius: 2vw; z-index: 4;">
+            <h1 style="font-size: 5vw; padding-top: 6vh;"><a href="https://www.redbubble.com/people/flufflaire/shop"
+                    target="_blank">buy my merch</a></h1>
+            <div id="popupfoot" style="position: absolute; margin-top: -18vh;"><a href="#" class="close agree"><i class="fa fa-close" style="font-size: 2vw;"></i></a></div>
+        </div>
+        <div id="mask"></div>
     </div>
 
+    <div class="main">
+        <div id="mySidenav" class="sidenav">
+            <a href="#">Work</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="https://www.redbubble.com/people/flufflaire/shop" target="_blank"><b>NEW MERCH!!</b></a>
+            <a href="https://flufflaire.github.io/FayeZhangResume.pdf">Resume</a>
+        </div>
+
+        <button onclick="toggleNav()" class="btn"
+            style="z-index: 2; position: absolute; margin-top: 2vh; margin-left: 80vw;"><i class="navIcon fa fa-bars"
+                style="font-size: 2vw;"></i></button>
+
+        <div class="intro">
+            <h1 class="ml10">
+                <span class="text-wrapper">
+                    <span class="letters">hi i'm faye zhang</span>
+                </span>
+            </h1>
+            <p>a dreamer 🕊️🌿;<br>
+                a purveyor of art 🎨;<br>
+                a gayme enthusiast 🎲;<br></p>
+            <h2><i>here to spread positivity and climb walls!</i></h2>
+        </div>
+    </div>
 
 
+
+    <script>
+        var navOpen = false;
+
+        $(document).ready(function () {
+            $('.ml10 .letters').each(function () {
+                $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+            });
+
+            anime.timeline({ loop: false })
+                .add({
+                    targets: '.ml10 .letter',
+                    rotateY: [-90, 0],
+                    duration: 1500,
+                    delay: function (el, i) {
+                        return 45 * i;
+                    }
+                });
+            var id = '#dialog';
+
+            //Get the screen height and width
+            var maskHeight = $(document).height();
+            var maskWidth = $(window).width();
+
+            //Set heigth and width to mask to fill up the whole screen
+            $('#mask').css({ 'width': maskWidth, 'height': maskHeight });
+
+            //transition effect
+            $('#mask').fadeIn(500);
+            $('#mask').fadeTo("slow", 0.9);
+
+            //Get the window height and width
+            var winH = $(window).height();
+            var winW = $(window).width();
+
+            //Set the popup window to center
+            $(id).css('top', winH / 2 - $(id).height() / 2);
+            $(id).css('left', winW / 2 - $(id).width() / 2);
+
+            //transition effect
+            $(id).fadeIn(2000);
+
+            //if close button is clicked
+            $('.window .close').click(function (e) {
+                //Cancel the link behavior
+                e.preventDefault();
+
+                $('#mask').hide();
+                $('.window').hide();
+            });
+
+            //if mask is clicked
+            $('#mask').click(function () {
+                $(this).hide();
+                $('.window').hide();
+            });
+        });
+        function myFunction() {
+            $(".popup").toggleClass("show");
+        }
+
+        function toggleNav() {
+            if (navOpen) {
+                $(".navIcon").removeClass("fa-close");
+                $(".navIcon").addClass("fa-bars");
+                $(".navIcon").css("color", "black");
+                document.getElementById("mySidenav").style.height = "0";
+                document.getElementById("mySidenav").style.opacity = "0";
+                document.body.style.backgroundColor = "white";
+                navOpen = false;
+            } else {
+                $(".navIcon").removeClass("fa-bars");
+                $(".navIcon").addClass("fa-close");
+                $(".navIcon").css("color", "#818181");
+                document.getElementById("mySidenav").style.height = "100vh";
+                document.getElementById("mySidenav").style.opacity = "1";
+                document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+                navOpen = true;
+            }
+        }
+    </script>
 
 </body>
 
