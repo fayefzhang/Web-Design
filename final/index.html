@@ -138,15 +138,27 @@
         #boxes .window {
             position: absolute;
         }
+
+        .sect {
+            height: 100vh;
+            scroll-snap-align: start;
+        }
+
+        .main {
+            overflow: auto;
+            scroll-snap-type: y mandatory;
+        }
     </style>
 </head>
 
 <body>
     <div id="boxes">
-        <div id="dialog" class="window" style="background-color: white; padding: 1vw; text-align: center; height: 30vh; width: 30vw; border-radius: 2vw; z-index: 4;">
+        <div id="dialog" class="window"
+            style="background-color: white; padding: 1vw; text-align: center; height: 30vh; width: 30vw; border-radius: 2vw; z-index: 4;">
             <h1 style="font-size: 5vw; padding-top: 6vh;"><a href="https://www.redbubble.com/people/flufflaire/shop"
                     target="_blank">buy my merch</a></h1>
-            <div id="popupfoot" style="position: absolute; margin-top: -18vh;"><a href="#" class="close agree"><i class="fa fa-close" style="font-size: 2vw;"></i></a></div>
+            <div id="popupfoot" style="position: absolute;"><a href="#" class="close agree"><i class="fa fa-close"
+                        style="font-size: 2vw;"></i></a></div>
         </div>
         <div id="mask"></div>
     </div>
@@ -164,7 +176,7 @@
             style="z-index: 2; position: absolute; margin-top: 2vh; margin-left: 80vw;"><i class="navIcon fa fa-bars"
                 style="font-size: 2vw;"></i></button>
 
-        <div class="intro">
+        <div class="sect intro">
             <h1 class="ml10">
                 <span class="text-wrapper">
                     <span class="letters">hi i'm faye zhang</span>
@@ -174,6 +186,10 @@
                 a purveyor of art 🎨;<br>
                 a gayme enthusiast 🎲;<br></p>
             <h2><i>here to spread positivity and climb walls!</i></h2>
+        </div>
+
+        <div class="sect about">
+            hi this is about me
         </div>
     </div>
 
